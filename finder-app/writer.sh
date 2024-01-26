@@ -7,8 +7,6 @@ fi
 
 writefile=$1
 writestr=$2
-
-
 dirpath=$(dirname "$writefile")
 
 if [ ! -d "$dirpath" ]; then
@@ -18,6 +16,6 @@ fi
 echo "$writestr" > "$writefile"
 
 if [ "$?" -ne 0 ]; then
-    echo "File could not be created."
+    echo "File cannot be created."
     exit 1
 fi
